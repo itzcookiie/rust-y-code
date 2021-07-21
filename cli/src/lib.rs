@@ -1,8 +1,11 @@
+use clap::Clap;
 
 
-
-
-pub struct clap {
-    pub first_name: tring,
-    pub last_name: tring
+#[derive(Debug,Clap)]
+pub struct PeopleCommand {
+    #[clap(short, long)]
+    pub first_name: String,
+    #[clap(short, long)]
+    pub last_name: String
 }
+
