@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/http/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/primer/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/db/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/cli/target" />
     </content>

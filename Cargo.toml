@@ -4,7 +4,8 @@ members = [
     "cli",
     "http",
     "primer",
-    "collections"
+    "collections",
+    "db"
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
