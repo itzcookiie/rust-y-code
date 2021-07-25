@@ -11,7 +11,10 @@ fn main() {
             .short('h')
             .long("hello")
             .takes_value(true)
+            .value_delimiter(",")
     );
+
+
 
     let matches = cli_app.get_matches();
 
