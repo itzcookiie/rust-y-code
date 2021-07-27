@@ -5,7 +5,8 @@ members = [
     "http",
     "primer",
     "collections",
-    "db"
+    "db",
+    "macros"
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

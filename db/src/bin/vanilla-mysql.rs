@@ -28,6 +28,16 @@ fn main() {
         }
     );
 
+    let pp = vec!["vew","fw"];
+    let stmnt = pp.iter().fold(String::new(),|a,b|{
+        match a.is_empty() {
+            true => format!(":{}",b),
+            false => {
+                format!("{}, :{}",a,b)
+            }
+        }
+    });
+
     conn.exec_batch(
         r"INSERT INTO person VALUES (:id, :name, :company_id)",
         persons.iter().map(|person| params! {

@@ -1,11 +1,8 @@
-extern crate db;
-extern crate diesel;
+use db::*;
 
-use self::db::*;
-use self::models::*;
-use self::diesel::prelude::*;
 
 fn main() {
+
     use db::schema::person::dsl::*;
     let connection = establish_connection();
 
