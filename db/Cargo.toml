@@ -7,3 +7,5 @@ edition = "2018"
 
 [dependencies]
 mysql = "21.0.1"
+diesel = { version = "1.4.4", features = ["mysql", "numeric"] }
+dotenv = "0.15.0"

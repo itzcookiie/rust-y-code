@@ -3,21 +3,24 @@ use mysql::prelude::Queryable;
 use db::{Company,Person};
 
 fn main() {
-    let company_a = Company{id : 1};
     let url = "mysql://mayowa:abc123@localhost:3306/rust";
     let opts = Opts::from_url(url).unwrap();
     let pool = Pool::new(opts).unwrap();
-
     let mut conn = pool.get_conn().unwrap();
 
+    let company_a = Company{id : 1};
     let persons = vec![
-        createPerson(1, String::from("Bob"), 1),
-        createPerson(2, String::from("Judy"), 1),
-        createPerson(3, String::from("Mike"), 1),
+        Person{
+            id: 1,
+            name: "".to_string(),
+            company_id: 0
+        },
+        create_person(2, String::from("Judy"), 1),
+        create_person(3, String::from("Mike"), 1),
     ];
 
-    dropTables(&mut conn);
-    createTables(&mut conn);
+    drop_tables(&mut conn);
+    create_tables(&mut conn);
 
     conn.exec_drop(
         r"INSERT INTO company VALUES (:id)", params!{
@@ -35,7 +38,7 @@ fn main() {
     );
 }
 
-fn createPerson(id : u64, name : String, company_id : u64) -> Person {
+fn create_person(id : i32, name : String, company_id : i32) -> Person {
     return Person{
         id,
         name,
@@ -43,7 +46,7 @@ fn createPerson(id : u64, name : String, company_id : u64) -> Person {
     }
 }
 
-fn createTables(conn : &mut PooledConn) {
+fn create_tables(conn : &mut PooledConn) {
     conn.query_drop(
         r"CREATE TABLE company (
             id INT NOT NULL,
@@ -62,7 +65,7 @@ fn createTables(conn : &mut PooledConn) {
     );
 }
 
-fn dropTables(conn : &mut PooledConn) {
+fn drop_tables(conn : &mut PooledConn) {
     conn.query_drop(
         r"DROP TABLE companies"
     );
