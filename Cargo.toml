@@ -6,7 +6,8 @@ members = [
     "primer",
     "collections",
     "db",
-    "macros"
+    "macros",
+    "tasks"
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

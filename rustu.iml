@@ -10,6 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/db/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/macros/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks/http-requests-10000/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tasks/write_json/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
       <excludeFolder url="file://$MODULE_DIR$/cli/target" />
     </content>
