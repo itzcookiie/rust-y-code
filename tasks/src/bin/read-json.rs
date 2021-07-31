@@ -7,3 +7,5 @@ fn main() {
     file.read_to_string(&mut contents);
     println!("{:?}", contents);
 }
+
+// Read JSON as JSON = deserialize

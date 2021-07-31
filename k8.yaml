@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: k8s-rust
+spec:
+  template:
+    spec:
+      containers:
+        - name: k8s-rust
+          image: itzcookiie/k8s-rust
+      restartPolicy: Never
+  backoffLimit: 4
